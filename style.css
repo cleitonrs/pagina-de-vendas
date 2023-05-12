@@ -37,14 +37,14 @@ header nav ul li a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 #home {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: #222;
+  background: linear-gradient(45deg, #deb3ac, #a36e68);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,6 +64,7 @@ header nav ul li a {
   position: relative;
   font-size: 4.5rem;
   color: #fff;
+  margin-bottom: 1.25rem;
 }
 
 #home .content p {
@@ -71,12 +72,13 @@ header nav ul li a {
   color: #fff;
   font-size: 1.2rem;
   line-height: 2.6rem;
+  margin-bottom: 1.25rem;
 }
 
 #home .hero {
   height: 40rem;
   width: 40rem;
-  background: red;
+  background: linear-gradient(45deg, #ffd2d4, #e30065);
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
@@ -87,6 +89,37 @@ header nav ul li a {
 
 #home .hero img {
   width: 100%;
+}
+
+#home .video__button {
+  background: linear-gradient(45deg, #e30065, #ff4600);
+  padding: 1.25rem;
+  border-radius: 8px;
+  width: 12rem;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#home .video__button:hover {
+  box-shadow: 0 20px 60px 10px rgba(255, 70, 0, 0.6);
+  animation: 0.9s linear 0s infinite normal none running pulse;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 #receive,
@@ -100,4 +133,51 @@ header nav ul li a {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+#receive h2 {
+  color: #0e1c34;
+  font-size: 4rem;
+}
+
+#receive h2 span {
+  font-size: 4.5rem;
+  font-weight: 900;
+}
+
+#receive {
+  background: linear-gradient(45deg, #dedfe1, #ffd2d4);
+  text-align: center;
+}
+
+#receive h2 {
+  margin-bottom: 2rem;
+}
+
+#receive .products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-self: center;
+  margin: 2.5rem 0;
+}
+
+#receive .products .imgBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  width: 25rem;
+  /* background: red; */
+  margin-right: 1.25rem;
+  transition: ease-in-out .5s;
+}
+
+#receive .products .imgBox:hover {
+  border-radius: 8px;
+  box-shadow: 10px 10px 25px 1px #c0c5ce;
+  transform: scale(1.01);
+}
+
+#receive .products .imgBox img {
+  width: 100%;
 }
