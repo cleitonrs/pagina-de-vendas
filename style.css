@@ -35,7 +35,7 @@ header nav ul li {
 
 header nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #0e1c34;
   font-weight: 500;
   font-size: 1rem;
 }
@@ -88,10 +88,10 @@ header nav ul li a {
 }
 
 #home .hero img {
-  width: 100%;
+  height: 100%;
 }
 
-#home .video__button {
+#home .videoButton, .getButton {
   background: linear-gradient(45deg, #e30065, #ff4600);
   padding: 1.25rem;
   border-radius: 8px;
@@ -103,7 +103,7 @@ header nav ul li a {
   text-transform: uppercase;
 }
 
-#home .video__button:hover {
+#home .videoButton:hover, .getButton:hover {
   box-shadow: 0 20px 60px 10px rgba(255, 70, 0, 0.6);
   animation: 0.9s linear 0s infinite normal none running pulse;
 }
@@ -143,6 +143,7 @@ header nav ul li a {
 #receive h2 span {
   font-size: 4.5rem;
   font-weight: 900;
+  color: #a82424;
 }
 
 #receive {
@@ -167,7 +168,6 @@ header nav ul li a {
   justify-content: center;
   height: 25rem;
   width: 25rem;
-  /* background: red; */
   margin-right: 1.25rem;
   transition: ease-in-out .5s;
 }
@@ -180,4 +180,111 @@ header nav ul li a {
 
 #receive .products .imgBox img {
   width: 100%;
+}
+
+#receive .giftContent {
+  position: relative;
+}
+
+#receive .giftContent .imgGift {
+  width: 45rem;
+}
+
+#receive .giftContent .shoppingEbook {
+  width: 35rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -37%);
+}
+
+#forWho {
+  background: linear-gradient(45deg, #deb3ac, #a36e68);
+  text-align: center;
+}
+
+#forWho h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+#forWho ol {
+  width: 100%;
+  text-align: left;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+#forWho ol li {
+  margin-bottom: 2rem;
+  line-height: 3rem;
+  transition: ease-in-out .5s;
+  padding: 1rem;
+}
+
+#forWho ol li:hover {
+  border-radius: 8px;
+  box-shadow: 10px 10px 25px 1px #c0c5ce;
+  transform: scale(1.01);
+}
+
+#forWho .getButton {
+  width: 15rem;
+  align-self: center;
+}
+
+#whoami {
+  background: linear-gradient(45deg, #dedfe1, #ffd2d4);
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#whoami .profile {
+  height: 30rem;
+  width: 30rem;
+  background: red;
+  display: flex;
+  margin-right: 1.25rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#whoami .profile img {
+  align-items: center;
+  justify-content: center;
+}
+
+#whoami .contentContainer {
+  width: 50%;
+  color: #0e1c34;
+}
+
+#whoami .contentContainer h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+#whoami .contentContainer p {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+}
+
+#getNow {
+  background: linear-gradient(45deg, #deb3ac, #a36e68);
+  text-align: center;
+}
+
+#getNow h3 {
+  font-size: 3rem;
+}
+
+#getNow h2 {
+  font-size: 4rem;
+  margin: 2rem 0;
 }
