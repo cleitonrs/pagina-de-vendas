@@ -138,12 +138,15 @@ header nav ul li a {
 #receive h2 {
   color: #0e1c34;
   font-size: 4rem;
+  text-transform: uppercase;
 }
 
 #receive h2 span {
   font-size: 4.5rem;
   font-weight: 900;
   color: #a82424;
+  text-shadow: 1px 1px 5px;
+  text-transform: uppercase;
 }
 
 #receive {
@@ -278,13 +281,47 @@ header nav ul li a {
 #getNow {
   background: linear-gradient(45deg, #deb3ac, #a36e68);
   text-align: center;
+  color: #fff;
 }
 
 #getNow h3 {
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
 #getNow h2 {
   font-size: 4rem;
   margin: 2rem 0;
+  color: #a82424;
+  text-shadow: 1px 1px 5px;
+  text-transform: uppercase;
+}
+
+#getNow .productsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#getNow .imgBoxAllContainer {
+  display: flex;
+  
+}
+
+#getNow .productsContainer .imgBoxAll {
+  height: 15rem;
+  width: 15rem;
+}
+
+#getNow .productsContainer .imgBoxAll img {
+  width: 100%;
+}
+
+#getNow .productsContainer ul li {
+  list-style: none;
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  padding: 1rem 0;
 }
