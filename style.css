@@ -23,6 +23,19 @@ header nav {
   backdrop-filter: blur(20px);
 }
 
+header .logo {
+  width: 5rem;
+  height: 5rem;
+  background: #f9c6d1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+header .logo img{
+  position: relative;
+  width: 5rem;
+}
+
 header nav ul {
   position: relative;
   display: flex;
@@ -78,7 +91,9 @@ header nav ul li a {
 #home .hero {
   height: 40rem;
   width: 40rem;
-  background: linear-gradient(45deg, #ffd2d4, #e30065);
+  background: linear-gradient(45deg, #ffb8c7, #f9c6d1);
+  border: 4px solid #fff;
+  box-shadow: 1px 1px 5px #fff;
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
@@ -91,20 +106,20 @@ header nav ul li a {
   height: 100%;
 }
 
-#home .videoButton, .getButton {
+#home .videoButton, .getButton, .getAllButton {
   background: linear-gradient(45deg, #e30065, #ff4600);
   padding: 1.25rem;
   border-radius: 8px;
-  width: 12rem;
+  width: 13rem;
   text-align: center;
   cursor: pointer;
   color: #fff;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
-#home .videoButton:hover, .getButton:hover {
-  box-shadow: 0 20px 60px 10px rgba(255, 70, 0, 0.6);
+#home .videoButton:hover, .getButton:hover, .getAllButton:hover {
+  box-shadow: 0 20px 60px 10px rgb(227, 0, 101, 0.6);
   animation: 0.9s linear 0s infinite normal none running pulse;
 }
 
@@ -127,7 +142,6 @@ header nav ul li a {
 #whoami,
 #getNow {
   position: relative;
-  background: #3434353a;
   min-height: 100vh;
   padding: 7.5rem 6.25rem;
   display: flex;
@@ -144,7 +158,7 @@ header nav ul li a {
 #receive h2 span {
   font-size: 4.5rem;
   font-weight: 900;
-  color: #a82424;
+  color: #e30065;
   text-shadow: 1px 1px 5px;
   text-transform: uppercase;
 }
@@ -167,22 +181,31 @@ header nav ul li a {
 
 #receive .products .imgBox {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 25rem;
   width: 25rem;
   margin-right: 1.25rem;
+  margin-bottom: 1.5rem;
   transition: ease-in-out .5s;
 }
 
 #receive .products .imgBox:hover {
   border-radius: 8px;
-  box-shadow: 10px 10px 25px 1px #c0c5ce;
+  box-shadow: 10px 10px 25px 1px #3d3e63;
   transform: scale(1.01);
 }
 
+
 #receive .products .imgBox img {
   width: 100%;
+}
+
+#receive .products .imgBox p {
+  color: #3d3e63;
+  text-transform: capitalize;
+  font-size: 1.2rem;
 }
 
 #receive .giftContent {
@@ -210,7 +233,7 @@ header nav ul li a {
   font-size: 4rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: #fff;
+  color: #0e1c34;
   margin-bottom: 2rem;
 }
 
@@ -225,18 +248,11 @@ header nav ul li a {
 #forWho ol li {
   margin-bottom: 2rem;
   line-height: 3rem;
-  transition: ease-in-out .5s;
   padding: 1rem;
 }
 
-#forWho ol li:hover {
-  border-radius: 8px;
-  box-shadow: 10px 10px 25px 1px #c0c5ce;
-  transform: scale(1.01);
-}
-
 #forWho .getButton {
-  width: 15rem;
+  width: 16rem;
   align-self: center;
 }
 
@@ -249,7 +265,9 @@ header nav ul li a {
 #whoami .profile {
   height: 30rem;
   width: 30rem;
-  background: red;
+  background: linear-gradient(45deg, #ffb8c7, #f9c6d1);
+  border: 4px solid #fff;
+  box-shadow: 1px 1px 5px #fff;
   display: flex;
   margin-right: 1.25rem;
   border-radius: 50%;
@@ -276,6 +294,7 @@ header nav ul li a {
   font-size: 1.6rem;
   line-height: 3rem;
   margin-bottom: 2rem;
+  color: #3d3e63;
 }
 
 #getNow {
@@ -292,12 +311,13 @@ header nav ul li a {
 #getNow h2 {
   font-size: 4rem;
   margin: 2rem 0;
-  color: #a82424;
+  color: #e30065;
   text-shadow: 1px 1px 5px;
   text-transform: uppercase;
 }
 
 #getNow .productsContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,23 +325,59 @@ header nav ul li a {
 }
 
 #getNow .imgBoxAllContainer {
-  display: flex;
-  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  margin: 2.5rem 0;
 }
 
-#getNow .productsContainer .imgBoxAll {
-  height: 15rem;
-  width: 15rem;
+#getNow .imgBoxAllContainer .imgBoxAll {
+  height: 25rem;
+  width: 25rem;
+  transition: ease-in-out .5s;
 }
 
-#getNow .productsContainer .imgBoxAll img {
+#getNow .imgBoxAllContainer .imgBoxAll:hover {
+  border-radius: 8px;
+  box-shadow: 10px 10px 25px 1px #3d3e63;
+  transform: scale(1.01);
+}
+
+#getNow .imgBoxAllContainer .imgBoxAll img {
   width: 100%;
 }
-
-#getNow .productsContainer ul li {
-  list-style: none;
-  text-align: left;
-  text-transform: capitalize;
+#getNow .imgBoxAllContainer p {
   font-size: 1.5rem;
-  padding: 1rem 0;
+  text-transform: capitalize;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#getNow .valuePromo {
+  background: #fff;
+  border-radius: 8px;
+  margin: 3rem 0;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #3d3e63;
+  text-transform: uppercase;
+  padding: 1.5rem 0;
+}
+
+#getNow .valuePromo span:nth-child(1) {
+  color: #af0000;
+  text-decoration: line-through;
+  font-style: italic;
+  font-weight: 900;
+}
+
+#getNow .valuePromo span:nth-child(3) {
+  color: #2c972c;
+  font-weight: 900;
+  font-style: italic;
+}
+
+#getNow .getAllButton {
+  width: 20rem;
+  align-self: center;
 }
