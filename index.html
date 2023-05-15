@@ -18,7 +18,7 @@
       <nav>
         <a href="#" class="logo"><img src="./assets/logo.png" alt="Logomarca"></a>
         <ul>
-          <li>
+          <li class="active">
             <a href="#home">
               Início
             </a>
@@ -55,7 +55,7 @@
           Se você nunca mais quer ficar em dúvida do que comer, no lanche da tarde, no café da manhã, ou em qualquer
           outro momento do dia, esse E-book é para você!
         </p>
-        <div class="videoButton ">
+        <div id="openTrailer" class="videoButton">
           Assista o vídeo
         </div>
       </div>
@@ -112,7 +112,7 @@
         </li>
       </ol>
       <div class="getButton">
-        Adquira agora mesmo
+        <a href="https://pay.hotmart.com/M82184304O?sck=HOTMART_PRODUCT_PAGE&off=ig587u9e&hotfeature=32&bid=1684178040044">Adquira agora mesmo</a>
       </div>
     </section>
     <section id="whoami">
@@ -167,10 +167,23 @@
         apenas <span>R$ 29,99</span>
       </p>
       <div class="getAllButton">
-        Quero adquirir todo esse material agora
+        <a href="https://pay.hotmart.com/M82184304O?sck=HOTMART_PRODUCT_PAGE&off=ig587u9e&hotfeature=32&bid=1684178040044">Quero adquirir todo esse material agora</a>
       </div>
     </section>
   </div>
+
+  <div class="modalContainer" id="modalContainer2">
+    <div class="modal">
+        <!-- <iframe width="460" height="315" src="https://www.youtube.com/embed/jN7NkKDwAI4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> 
+        </iframe> -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jN7NkKDwAI4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <button class="closeButton getButton" id="closeTrailer">
+        Fechar
+      </button>
+    </div>
+  </div>
+
+  <script src="./script/script.js"></script>
 </body>
 
 </html>

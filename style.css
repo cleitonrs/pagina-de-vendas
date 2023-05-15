@@ -46,11 +46,20 @@ header nav ul li {
   list-style: none;
 }
 
+
 header nav ul li a {
   text-decoration: none;
-  color: #0e1c34;
+  color: #fff;
   font-weight: 500;
   font-size: 1rem;
+}
+
+header nav ul li.active a {
+  color: #0e1c34;
+}
+
+header nav ul li:hover a {
+  color: #0e1c34;
 }
 
 #home {
@@ -256,6 +265,11 @@ header nav ul li a {
   align-self: center;
 }
 
+#forWho a {
+  text-decoration: none;
+  color: #fff;
+}
+
 #whoami {
   background: linear-gradient(45deg, #dedfe1, #ffd2d4);
   flex-direction: row;
@@ -380,4 +394,53 @@ header nav ul li a {
 #getNow .getAllButton {
   width: 20rem;
   align-self: center;
+}
+
+#getNow a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Modal */
+
+.modalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  z-index: 20000;
+  transition: opacity .3s ease;
+}
+
+.modalContainer.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  /* background; */
+  /* border-radius: 5px; */
+  /* box-shadow: 0 2px 4px rgba(250, 250, 250, 0.2); */
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.modal .closeButton {
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.modal .closeButton:hover {
+  animation: none;
+  box-shadow: 1px 1px 15px #e30065;
 }
