@@ -115,11 +115,21 @@ header nav ul li:hover a {
   height: 100%;
 }
 
+#home .videoButton {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+ion-icon {
+  font-size: 20px;
+}
+
 #home .videoButton, .getButton, .getAllButton {
   background: linear-gradient(45deg, #e30065, #ff4600);
   padding: 1.25rem;
   border-radius: 8px;
-  width: 13rem;
+  width: 14rem;
   text-align: center;
   cursor: pointer;
   color: #fff;
@@ -375,6 +385,7 @@ header nav ul li:hover a {
   font-weight: 700;
   color: #3d3e63;
   text-transform: uppercase;
+  text-align: center;
   padding: 1.5rem 0;
 }
 
@@ -427,11 +438,21 @@ header nav ul li:hover a {
   /* background; */
   /* border-radius: 5px; */
   /* box-shadow: 0 2px 4px rgba(250, 250, 250, 0.2); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 30px 50px;
   width: 600px;
   max-width: 100%;
   text-align: center;
 }
+
+.modal iframe {
+  width: 1126px;
+  height: 633px;
+}
+
 
 .modal .closeButton {
   border: none;
@@ -443,4 +464,150 @@ header nav ul li:hover a {
 .modal .closeButton:hover {
   animation: none;
   box-shadow: 1px 1px 15px #e30065;
+}
+
+/* Responsive */
+
+@media (max-width: 1120px) {
+  header {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  #home {
+    padding: 8rem 3.125rem;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  #home .hero {
+    width: 35rem;
+    height: 35rem;
+    filter: opacity(.5);
+  }
+
+  #receive .products {
+    grid-template-columns: 1fr;
+  }
+
+  #whoami {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #whoami .contentContainer {
+    width: 100%;
+  }
+
+  #whoami .profile {
+    margin-bottom: 1.5rem;
+  }
+
+  #whoami h2, p {
+    text-align: center;
+  }
+
+  #getNow .imgBoxAllContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .modal iframe {
+    width: 704px;
+    height: 396px;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 12px;
+  }
+
+  #home .content h1 {
+    font-size: 4rem;
+  }
+
+  #home .hero {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  #receive h2 {
+    font-size: 3rem;
+  }
+
+  #receive h2 span {
+    font-size: 3.5rem;
+  }
+
+  #receive .giftContent .imgGift {
+    width: 20rem;
+  }
+
+  #receive .giftContent .shoppingEbook {
+    width: 15rem;
+  }
+
+  #forWho h2 {
+    font-size: 2.5rem;
+  }
+
+  #forWho ol {
+    font-size: 1.5rem;
+  }
+
+  #whoami h2, p {
+    text-align: left;
+  }
+
+  #whoami .contentContainer h2 {
+    font-size: 3rem;
+  }
+
+  #whoami .contentContainer p {
+    font-size: 1.5rem;
+  }
+
+  #getNow h3 {
+    font-size: 2rem;
+  }
+
+  #getNow h2 {
+    font-size: 3rem;
+  }
+
+  #getNow .valuePromo {
+    font-size: 2rem;
+  }
+
+  .modal iframe {
+    width: 590px;
+    height: 306px;
+  }
+}
+
+@media screen and (max-width: 414px){
+  iframe {
+    width: 414px;
+    height: 233px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  iframe {
+    width: 360px;
+    height: 202px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  iframe {
+    width: 320px;
+    height: 180px;
+  }
 }
