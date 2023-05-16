@@ -24,5 +24,5 @@ openTrailer.addEventListener('click', () => {
 closeTrailer.addEventListener('click', () => {
   modalContainer2.classList.remove('show')
   iframe.setAttribute('src', '')
-  iframe.setAttribute('src', 'https://www.youtube.com/embed/jN7NkKDwAI4')
+  iframe.setAttribute('src', 'https://www.youtube.com/embed/jN7NkKDwAI4?controls=0')
 })
